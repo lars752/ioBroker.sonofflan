@@ -1,0 +1,110 @@
+{
+  "common": {
+    "name": "sonofflan",
+    "version": "0.1.1",
+    "news": {
+      "0.1.1": {
+        "en": "Repository moved to lars752/ioBrokerSonoffLAN",
+        "de": "Repository nach lars752/ioBrokerSonoffLAN umgezogen"
+      },
+      "0.1.0": {
+        "en": "Initial release based on AlexxIT/SonoffLAN: eWeLink cloud (WebSocket), LAN control incl. encryption, mDNS discovery, DIY devices, ~120 device types (UIIDs)",
+        "de": "Erste Version auf Basis von AlexxIT/SonoffLAN: eWeLink-Cloud (WebSocket), LAN-Steuerung inkl. Verschlüsselung, mDNS-Erkennung, DIY-Geräte, rund 120 Gerätetypen (UIIDs)"
+      }
+    },
+    "titleLang": {
+      "en": "Sonoff LAN / eWeLink",
+      "de": "Sonoff LAN / eWeLink"
+    },
+    "desc": {
+      "en": "Control Sonoff/eWeLink devices locally (LAN) and via the eWeLink cloud – based on AlexxIT/SonoffLAN",
+      "de": "Sonoff/eWeLink-Geräte lokal (LAN) und über die eWeLink-Cloud steuern – basierend auf AlexxIT/SonoffLAN"
+    },
+    "authors": [
+      "Lars <174879844+lars752@users.noreply.github.com>"
+    ],
+    "keywords": [
+      "sonoff",
+      "ewelink",
+      "lan",
+      "diy",
+      "mdns"
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "sonofflan.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/lars752/ioBrokerSonoffLAN/main/admin/sonofflan.png",
+    "readme": "https://github.com/lars752/ioBrokerSonoffLAN/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 2,
+    "mode": "daemon",
+    "type": "iot-systems",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "messagebox": true,
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.17.14"
+      }
+    ]
+  },
+  "encryptedNative": [
+    "password",
+    "appSecret"
+  ],
+  "protectedNative": [
+    "password",
+    "appSecret"
+  ],
+  "native": {
+    "mode": "auto",
+    "username": "",
+    "password": "",
+    "countryCode": "+49",
+    "homes": "",
+    "appId": "",
+    "appSecret": "",
+    "mdnsInterface": "",
+    "sensorRefresh": true,
+    "energyInterval": 3600,
+    "createRaw": true,
+    "devices": []
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Verbunden (Cloud oder LAN)",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}
