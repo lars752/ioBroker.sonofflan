@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "sonofflan",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
+      "0.1.2": {
+        "en": "Repository renamed to lars752/ioBroker.sonoffLAN",
+        "de": "Repository in lars752/ioBroker.sonoffLAN umbenannt"
+      },
       "0.1.1": {
         "en": "Repository moved to lars752/ioBrokerSonoffLAN",
         "de": "Repository nach lars752/ioBrokerSonoffLAN umgezogen"
@@ -37,8 +41,8 @@
     "platform": "Javascript/Node.js",
     "icon": "sonofflan.png",
     "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/lars752/ioBrokerSonoffLAN/main/admin/sonofflan.png",
-    "readme": "https://github.com/lars752/ioBrokerSonoffLAN/blob/main/README.md",
+    "extIcon": "https://raw.githubusercontent.com/lars752/ioBroker.sonoffLAN/main/admin/sonofflan.png",
+    "readme": "https://github.com/lars752/ioBroker.sonoffLAN/blob/main/README.md",
     "loglevel": "info",
     "tier": 2,
     "mode": "daemon",

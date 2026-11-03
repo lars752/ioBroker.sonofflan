@@ -9,10 +9,10 @@ Steuert Sonoff- und andere eWeLink-Geräte **lokal im LAN** und/oder über die *
 Admin → Adapter → „Benutzerdefiniert installieren“ (GitHub-Symbol) → Reiter „Beliebig“ → URL:
 
 ```
-https://github.com/lars752/ioBrokerSonoffLAN
+https://github.com/lars752/ioBroker.sonoffLAN
 ```
 
-Alternativ auf der Konsole: `iobroker url https://github.com/lars752/ioBrokerSonoffLAN`
+Alternativ auf der Konsole: `iobroker url https://github.com/lars752/ioBroker.sonoffLAN`
 
 Der Adaptername bleibt `sonofflan` (Instanz `sonofflan.0`).
 
@@ -72,6 +72,9 @@ Adapterweit: `info.connection`, `info.cloud`, `info.lanDiscovered` (im LAN gefun
 Bewusst nicht portiert: IR/RF-Fernbedienungen als eigene Entitäten (Rohzugriff über `raw.*` möglich), Klima-Entitäten (Werte erscheinen als Sensoren, Steuerung per `raw.command`), Kameras, Lichtübergänge (`transition`).
 
 ## Changelog
+
+### 0.1.2 (2026-11-03)
+- Repository in lars752/ioBroker.sonoffLAN umbenannt
 
 ### 0.1.1 (2026-11-03)
 - Repository nach lars752/ioBrokerSonoffLAN umgezogen

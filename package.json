@@ -1,6 +1,6 @@
 {
   "name": "iobroker.sonofflan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sonoff/eWeLink-Geräte lokal (LAN) und über die eWeLink-Cloud steuern – basierend auf AlexxIT/SonoffLAN",
   "author": {
     "name": "Lars",
@@ -9,7 +9,7 @@
   "contributors": [
     "AlexxIT (SonoffLAN, Protokoll und Gerätespezifikationen)"
   ],
-  "homepage": "https://github.com/lars752/ioBrokerSonoffLAN",
+  "homepage": "https://github.com/lars752/ioBroker.sonoffLAN",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lars752/ioBrokerSonoffLAN.git"
+    "url": "https://github.com/lars752/ioBroker.sonoffLAN.git"
   },
   "engines": {
     "node": ">=18"
@@ -45,6 +45,6 @@
     "test": "node test/run.js"
   },
   "bugs": {
-    "url": "https://github.com/lars752/ioBrokerSonoffLAN/issues"
+    "url": "https://github.com/lars752/ioBroker.sonoffLAN/issues"
   }
 }
