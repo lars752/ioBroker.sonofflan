@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "sonofflan",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "news": {
+      "0.1.3": {
+        "en": "Fix URL installation: use lowercase repository URL (ioBroker.sonofflan)",
+        "de": "URL-Installation korrigiert: Repository-URL kleingeschrieben (ioBroker.sonofflan)"
+      },
       "0.1.2": {
         "en": "Repository renamed to lars752/ioBroker.sonoffLAN",
         "de": "Repository in lars752/ioBroker.sonoffLAN umbenannt"
@@ -41,8 +45,8 @@
     "platform": "Javascript/Node.js",
     "icon": "sonofflan.png",
     "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/lars752/ioBroker.sonoffLAN/main/admin/sonofflan.png",
-    "readme": "https://github.com/lars752/ioBroker.sonoffLAN/blob/main/README.md",
+    "extIcon": "https://raw.githubusercontent.com/lars752/ioBroker.sonofflan/main/admin/sonofflan.png",
+    "readme": "https://github.com/lars752/ioBroker.sonofflan/blob/main/README.md",
     "loglevel": "info",
     "tier": 2,
     "mode": "daemon",
