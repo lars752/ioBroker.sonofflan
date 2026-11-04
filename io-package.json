@@ -37,7 +37,7 @@
             "de": "Sonoff/eWeLink-Geräte lokal (LAN) und über die eWeLink-Cloud steuern – basierend auf AlexxIT/SonoffLAN"
         },
         "authors": [
-            "Lars <174879844+lars752@users.noreply.github.com>"
+            "lars752"
         ],
         "keywords": [
             "sonoff",
