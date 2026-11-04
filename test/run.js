@@ -13,7 +13,7 @@ Module._resolveFilename = function (req, ...rest) {
 };
 
 const crypto = require('../lib/crypto');
-const { getSpec, setupDiy, DECODERS } = require('../lib/devices');
+const { getSpec, setupDiy, DECODERS, F } = require('../lib/devices');
 const { CloudRegistry } = require('../lib/cloud');
 const { parseTxt } = require('../lib/local');
 
@@ -123,6 +123,20 @@ test('Tastenereignis mit trigTime-Duplikatschutz', () => {
     assert.equal(k.update(dev.params, dev), null); // Startwert
     assert.equal(k.update({ key: 0, trigTime: '1' }, dev), null);
     assert.deepEqual(k.update({ key: 1, trigTime: '2' }, dev), { action: 'double' });
+});
+test('localKeyPass (M5): Cloud-Nachricht und LAN-Vollzustand zählen einmal, späterer Druck wieder', () => {
+    let now = 1000;
+    const { dev, features } = feat(160, {});
+    const f = features.find((x) => x.event);
+    f.update.call(f, {}, dev);
+    const k = F.key({ localKey: true, now: () => now });
+    assert.deepEqual(k.update({ localKeyPass: { outlet: 0, key: 0 }, switches: [{ outlet: 0, switch: 'on' }], rssi: -40 }, dev), { action: 'button_1_single' });
+    now += 150;
+    assert.equal(k.update({ localKeyPass: { outlet: 0, key: 0 } }, dev), null);
+    assert.equal(k.update({ switches: [{ outlet: 0, switch: 'off' }] }, dev), null);
+    now += 5000;
+    assert.deepEqual(k.update({ localKeyPass: { outlet: 0, key: 0 } }, dev), { action: 'button_1_single' });
+    assert.deepEqual(k.update({ localKeyPass: { outlet: 0, key: 1 } }, dev), { action: 'button_1_double' });
 });
 test('Energie-Dekoder', () => {
     assert.deepEqual(DECODERS.pow('010203').slice(0, 1), [1.23]);

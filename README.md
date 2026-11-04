@@ -75,6 +75,10 @@ Bewusst nicht portiert: IR/RF-Fernbedienungen als eigene Entitäten (Rohzugriff 
 
 ## Changelog
 
+### 1.0.0 (2026-11-04)
+- Tasten-Ereignisse (`action`) von Geräten mit `localKeyPass` (z. B. Sonoff M5 mit abgekoppeltem Relais) werden jetzt auch aus dem LAN-Vollzustand erkannt, nicht nur aus der kurzen Cloud-Nachricht
+- LAN und Cloud melden denselben Druck kurz nacheinander: eine Wiederholung innerhalb von 1,5 s zählt nicht doppelt
+
 ### 0.1.3 (2026-11-03)
 - URL-Installation korrigiert: Repository-URL kleingeschrieben (`ioBroker.sonofflan`)
 
