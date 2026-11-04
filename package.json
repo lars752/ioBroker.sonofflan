@@ -1,6 +1,6 @@
 {
   "name": "iobroker.sonofflan",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sonoff/eWeLink-Geräte lokal (LAN) und über die eWeLink-Cloud steuern – basierend auf AlexxIT/SonoffLAN",
   "author": {
     "name": "Lars",

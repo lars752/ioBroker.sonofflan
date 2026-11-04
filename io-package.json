@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "sonofflan",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "news": {
+            "1.1.0": {
+                "en": "New datapoint detach / detachN (relay detached from button) for Sonoff M5 and similar",
+                "de": "Neuer Datenpunkt detach / detachN (Relais vom Taster abgekoppelt) für Sonoff M5 und ähnliche"
+            },
             "1.0.0": {
                 "en": "Stable release: button events of detached relays (Sonoff M5) also arrive via LAN; LAN and cloud report of the same press count once",
                 "de": "Stabile Version: Tasten-Ereignisse abgekoppelter Relais (Sonoff M5) kommen auch per LAN an; LAN- und Cloud-Meldung desselben Drucks zählen einmal"

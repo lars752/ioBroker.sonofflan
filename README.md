@@ -58,6 +58,7 @@ sonofflan.0.<deviceid>.
   light.on / brightness (%) / colorTemp (K) / rgb (#RRGGBB) / effect
   fan.on / fan.speed
   cover.position (0 = zu, 100 = offen) / open / close / stop / state
+  detach | detach1…n    – Relais vom Taster abgekoppelt (nur lesen, M5 u. ä.)
   action                – letzte Tastenaktion (single, double, hold, button_2_single …)
 ```
 
@@ -74,6 +75,9 @@ Adapterweit: `info.connection`, `info.cloud`, `info.lanDiscovered` (im LAN gefun
 Bewusst nicht portiert: IR/RF-Fernbedienungen als eigene Entitäten (Rohzugriff über `raw.*` möglich), Klima-Entitäten (Werte erscheinen als Sensoren, Steuerung per `raw.command`), Kameras, Lichtübergänge (`transition`).
 
 ## Changelog
+
+### 1.1.0 (2026-11-04)
+- Neu: Datenpunkt `detach` bzw. `detach1…n` (Relais abgekoppelt, aus `relaySeparations`) für Sonoff M5 (UIID 160/161/162/275)
 
 ### 1.0.0 (2026-11-04)
 - Tasten-Ereignisse (`action`) von Geräten mit `localKeyPass` (z. B. Sonoff M5 mit abgekoppeltem Relais) werden jetzt auch aus dem LAN-Vollzustand erkannt, nicht nur aus der kurzen Cloud-Nachricht

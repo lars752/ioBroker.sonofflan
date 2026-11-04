@@ -138,6 +138,14 @@ test('localKeyPass (M5): Cloud-Nachricht und LAN-Vollzustand zÃ¤hlen einmal, spÃ
     assert.deepEqual(k.update({ localKeyPass: { outlet: 0, key: 0 } }, dev), { action: 'button_1_single' });
     assert.deepEqual(k.update({ localKeyPass: { outlet: 0, key: 1 } }, dev), { action: 'button_1_double' });
 });
+test('M5: relaySeparations -> detach-Datenpunkte', () => {
+    const one = feat(160, {}).features.find((x) => x.update && (x.update({ relaySeparations: [{ outlet: 0, enable: 1 }] }, {}) || {}).detach === true);
+    assert.deepEqual(one.update({ relaySeparations: [{ outlet: 0, enable: 1 }] }), { detach: true });
+    assert.deepEqual(one.update({ relaySeparations: [{ outlet: 0, enable: 0 }] }), { detach: false });
+    assert.equal(one.update({ switches: [] }), null);
+    const two = feat(161, {}).features.find((x) => x.update && 'detach1' in (x.update({ relaySeparations: [{ outlet: 0, enable: 1 }] }, {}) || {}));
+    assert.deepEqual(two.update({ relaySeparations: [{ outlet: 0, enable: 1 }, { outlet: 1, enable: 0 }] }), { detach1: true, detach2: false });
+});
 test('Energie-Dekoder', () => {
     assert.deepEqual(DECODERS.pow('010203').slice(0, 1), [1.23]);
     assert.deepEqual(DECODERS.dualr3('0a25'), [10.25]);
